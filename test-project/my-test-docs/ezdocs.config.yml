@@ -1,0 +1,53 @@
+version: "1.0"
+name: "my-test-docs"
+description: "Test documentation site built with EZ Docs"
+
+content:
+  source: "./content"
+  ignore: ["**/drafts/**", "**/*.draft.md"]
+
+collections:
+  docs:
+    pattern: "docs/**/*.md"
+    route: "/docs/{slug}"
+    sort:
+      by: "order"
+      fallback: "title"
+      order: "asc"
+    nextra:
+      sidebar: true
+      searchable: true
+
+  guides:
+    pattern: "guides/**/*.md"
+    route: "/guides/{slug}"
+    sort:
+      by: "date"
+      order: "desc"
+    nextra:
+      sidebar: true
+      breadcrumbs: true
+
+site:
+  title: "My Test Docs Documentation"
+  description: "Test documentation site built with EZ Docs"
+
+output:
+  nextra:
+    directory: "./.ezdocs"
+    theme: "docs"
+  exports:
+    - type: "json"
+      path: "./content.json"
+    - type: "typescript"
+      path: "./src/generated/content.ts"
+
+images:
+  formats: ["webp", "jpeg"]
+  sizes: [640, 1280, 1920]
+  quality: 85
+
+dev:
+  port: 3000
+  watch: true
+  livereload: true

@@ -1,0 +1,56 @@
+{
+  "name": "@ezdocs/core",
+  "version": "0.1.0",
+  "description": "Core content processing and Nextra generation library for EZ Docs",
+  "keywords": ["documentation", "markdown", "nextra", "yaml", "contentkit"],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "ezdocs-build": "./bin/build.cjs",
+    "ezdocs-dev": "./bin/dev.cjs",
+    "ezdocs-validate": "./bin/validate.cjs"
+  },
+  "files": [
+    "dist/",
+    "bin/"
+  ],
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "rm -rf dist",
+    "dev": "tsc --build --watch",
+    "test": "jest",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "fast-glob": "^3.3.2",
+    "js-yaml": "^4.1.0",
+    "sharp": "^0.33.2",
+    "commander": "^11.1.0",
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.0",
+    "@types/js-yaml": "^4.0.9",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelcolvin/ezdocs.git",
+    "directory": "packages/core"
+  }
+}

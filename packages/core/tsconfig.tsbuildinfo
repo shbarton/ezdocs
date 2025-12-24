@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/loader.ts","./src/content/parser.ts","./src/content/processor.ts","./src/content/types.ts","./src/generators/exports.ts","./src/generators/nextra.ts","./src/utils/filesystem.ts","./src/utils/routing.ts","./src/utils/slug.ts"],"version":"5.9.3"}
