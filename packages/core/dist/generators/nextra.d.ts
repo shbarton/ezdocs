@@ -13,7 +13,9 @@ export declare class NextraGenerator {
     private generateRootMeta;
     private getFileNameFromRoute;
     private generateThemeConfig;
+    private generateModernCSS;
     private generateNextConfig;
+    private generateAppJs;
     private generatePackageJson;
 }
 //# sourceMappingURL=nextra.d.ts.map
